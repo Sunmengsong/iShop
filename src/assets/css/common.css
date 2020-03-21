@@ -1,0 +1,47 @@
+/* 样式重置 */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+div {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #f0f0f0;
+  padding-bottom: 50px;
+}
+
+/* 1像素线 */
+@media only screen and (-webkit-device-pixel-ratio: 2) {
+  .xline {
+    background: #999;
+    height: 1px;
+    transform: scaleY(0.5);
+  }
+  .yline {
+    background: #999;
+    width: 1px;
+    transform: scaleX(0.5);
+  }
+}
+@media only screen and (-webkit-device-pixel-ratio: 2) {
+  .xline {
+    background: #999;
+    height: 1px;
+    transform: scaleY(0.3333333);
+  }
+  .yline {
+    background: #999;
+    width: 1px;
+    transform: scaleX(0.3333333);
+  }
+}
+
+.van-submit-bar {
+  bottom: 50px !important;
+}

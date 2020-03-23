@@ -62,10 +62,13 @@
     <div class="logout">
       <van-button square plain hairline type="danger" @click="doLoginOut">退出登录</van-button>
     </div>
+
+    <Tabbar></Tabbar>
   </div>
 </template>
 
 <script>
+import Tabbar from "../components/Tabbar";
 import "../assets/css/mine.css";
 export default {
   data() {
@@ -95,6 +98,9 @@ export default {
         next();
       }
     });
+  },
+  components: {
+    Tabbar
   }
 };
 </script>

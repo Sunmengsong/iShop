@@ -13,7 +13,27 @@ const routes = [
   {
     path: "/apps",
     name: "Apps",
-    component: () => import("../views/Apps.vue")
+    component: () => import("../views/Apps.vue"),
+    children: [
+      {
+        path: "",
+        redirect: "hottest"
+      },
+      {
+        path: "hottest",
+        component: () => import("../components/apps/Hottest.vue")
+      },
+      {
+        path: "phone",
+        component: () => import("../components/apps/Phone.vue")
+      },
+      { path: "yifu", component: () => import("../components/apps/Yifu.vue") }
+    ]
+  },
+  {
+    path: "/apps/type",
+    name: "Cart",
+    component: () => import("../components/apps/Type.vue")
   },
   {
     path: "/cart",
@@ -28,6 +48,10 @@ const routes = [
   {
     path: "/login",
     component: () => import("../components/mine/Login.vue")
+  },
+  {
+    path: "/details/:id",
+    component: () => import("../components/apps/Details.vue")
   }
 ];
 

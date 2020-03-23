@@ -23,10 +23,12 @@
       </div>
       <van-button size="large" square plain hairline type="danger" @click="doLogin">登录</van-button>
     </van-cell-group>
+    <Tabbar></Tabbar>
   </div>
 </template>
 
 <script>
+import Tabbar from "../Tabbar";
 import "../../assets/css/login.css";
 export default {
   data() {
@@ -48,6 +50,9 @@ export default {
         this.$router.go(-1);
       }
     }
+  },
+  components: {
+    Tabbar
   }
 };
 </script>

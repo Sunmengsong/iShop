@@ -34,10 +34,13 @@
         </div>
       </div>
     </div>
+
+    <Tabbar></Tabbar>
   </div>
 </template>
 
 <script>
+import Tabbar from "../components/Tabbar";
 import Swipper from "../components/Home/Swipper";
 import NavList from "../components/Home/NavList";
 import "../assets/css/home.css";
@@ -61,7 +64,8 @@ export default {
   },
   components: {
     Swipper,
-    NavList
+    NavList,
+    Tabbar
   }
 };
 </script>

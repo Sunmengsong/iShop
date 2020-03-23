@@ -16,10 +16,13 @@
       </van-swipe-cell>
     </div>
     <cartfoot></cartfoot>
+
+    <Tabbar></Tabbar>
   </div>
 </template>
 
 <script>
+import Tabbar from "../components/Tabbar";
 import cartfoot from "../components/cart/CartFoot";
 export default {
   data() {
@@ -32,7 +35,8 @@ export default {
     };
   },
   components: {
-    cartfoot
+    cartfoot,
+    Tabbar
   },
   methods: {
     // 导航返回

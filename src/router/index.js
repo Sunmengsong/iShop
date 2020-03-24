@@ -46,12 +46,32 @@ const routes = [
     component: () => import("../views/Mine.vue")
   },
   {
+    path: "/orderlist",
+    component: () => import("../components/mine/OrderList.vue")
+  },
+  {
     path: "/login",
     component: () => import("../components/mine/Login.vue")
   },
   {
     path: "/details/:id",
     component: () => import("../components/apps/Details.vue")
+  },
+  {
+    path: "/mine/favorite",
+    component: () => import("../components/mine/Favorite.vue")
+  },
+  {
+    path: "/mine/address",
+    component: () => import("../components/mine/Address.vue")
+  },
+  {
+    path: "/mine/callme",
+    component: () => import("../components/mine/Callme.vue")
+  },
+  {
+    path: "/mine/gethelp",
+    component: () => import("../components/mine/Gethelp.vue")
   }
 ];
 

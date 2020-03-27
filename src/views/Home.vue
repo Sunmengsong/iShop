@@ -6,20 +6,21 @@
         <van-search
           v-model="search"
           placeholder="请输入搜索关键词"
+          input-align="center"
           shape="round"
-          show-action
-          @search="onSearch"
-          action-text
           @focus="toSearch"
-        >
-          <div slot="action" @click="onSearch">搜索</div>
-        </van-search>
+        ></van-search>
       </div>
     </van-sticky>
     <!-- 轮播图 -->
     <Swipper></Swipper>
     <!-- 导航栏 -->
     <NavList></NavList>
+    <!-- 广播 -->
+    <van-notice-bar
+      left-icon="volume-o"
+      text="温馨提示: 该版本只供参考, 无法进行购买操作, 详情请联系QQ: 957834291, 备注:'web'"
+    />
     <!-- 推荐 -->
     <div class="recommend">
       <div class="home-title">
@@ -53,10 +54,7 @@ export default {
   },
   methods: {
     toSearch() {
-      this.$router.push("/home/search");
-    },
-    onSearch() {
-      this.$toast(`搜索了${this.search}的相关内容`);
+      this.$router.push("/search");
     },
     onCancel() {
       this.$toast(`点击了取消`);
